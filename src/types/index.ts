@@ -9,11 +9,13 @@ export interface LotteryResult {
   prize?: string;
   drawDate?: string;
   serialNo: string;
+  productType?:string;
 }
 
 export interface WinningNumber {
   prize: string;
   drawDate: string;
+  productType:string
 }
 
 export type WinningNumbersMap = {
