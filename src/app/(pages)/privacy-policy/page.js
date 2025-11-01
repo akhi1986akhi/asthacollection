@@ -111,7 +111,7 @@ export default function PrivacyPolicy() {
                     or use our services.
                   </p>
                   <p>
-                    By accessing or using Astha Collection's services, you agree to the terms of this 
+                    By accessing or using Astha Collection&apos;s services, you agree to the terms of this 
                     Privacy Policy. If you do not agree with the terms, please do not access the site or use our services.
                   </p>
                 </div>
@@ -300,7 +300,7 @@ export default function PrivacyPolicy() {
                 <div className="space-y-4 text-gray-700">
                   <p>
                     We may update this Privacy Policy from time to time. We will notify you of any changes 
-                    by posting the new Privacy Policy on this page and updating the "Last updated" date.
+                    by posting the new Privacy Policy on this page and updating the &quot;Last updated&quot; date.
                   </p>
                   <p>
                     Continued use of our services after any changes constitutes acceptance of the updated policy. 

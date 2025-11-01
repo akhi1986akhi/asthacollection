@@ -124,7 +124,7 @@ export default function CheckLottery() {
                   <h3 className="text-xl font-black text-gray-800">Enter Your Ticket</h3>
                   <Ticket className="w-6 h-6 text-pink-600" />
                 </div>
-                <p className="text-gray-600 font-semibold">Check if you're our lucky winner!</p>
+                <p className="text-gray-600 font-semibold">Check if you&apos;re our lucky winner!</p>
                 <div className="flex items-center justify-center gap-2 mt-3">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
@@ -174,7 +174,7 @@ export default function CheckLottery() {
                       <div>
                         <p className="text-sm font-bold text-gray-700 mb-1">Where to find it?</p>
                         <p className="text-xs text-gray-600 leading-relaxed">
-                          Your lottery serial number is printed at the bottom of your purchase receipt. It starts with 'L' followed by numbers.
+                          Your lottery serial number is printed at the bottom of your purchase receipt. It starts with &apos;L&apos; followed by numbers.
                         </p>
                       </div>
                     </div>

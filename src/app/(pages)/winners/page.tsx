@@ -1,7 +1,7 @@
 'use client';
 
 import { JSX, useState } from 'react';
-import { Crown, Trophy, Star, Award, Users, Tv, Watch, Zap, Home } from 'lucide-react';
+import { Crown, Trophy, Award, Users, Tv, Watch, Zap, Home } from 'lucide-react';
 
 interface Winner {
   id: number;

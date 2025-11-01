@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
-import { Crown, Gift, Sparkles, Menu, X, Home, Trophy, Users, Store, Phone } from 'lucide-react';
+import { Crown, Gift, Sparkles, Menu, X, Home, Trophy, Phone } from 'lucide-react';
 
 export default function Header() {
   const router = useRouter();

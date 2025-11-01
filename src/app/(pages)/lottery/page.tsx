@@ -14,7 +14,7 @@ export default function Home() {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData((prev: any) => ({
+    setFormData((prev: UserData) => ({
       ...prev,
       [name]: value
     }));
