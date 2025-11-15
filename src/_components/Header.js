@@ -13,7 +13,7 @@ export default function Header() {
     { name: 'Home', href: '/', icon: Home, current: pathname === '/' },
     { name: 'Try Luck', href: '/lottery', icon: Sparkles, current: pathname === '/lottery' },
     { name: 'Winners', href: '/winners', icon: Trophy, current: pathname === '/winners' },
-    { name: 'Products', href: '/products', icon: Gift, current: pathname === '/products' },
+    { name: 'Shop', href: '/shop', icon: Gift, current: pathname === '/shop' },
     { name: 'Contact', href: '/contact', icon: Phone, current: pathname === '/contact' },
   ];
 

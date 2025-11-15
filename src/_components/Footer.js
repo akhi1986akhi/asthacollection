@@ -1,6 +1,6 @@
 'use client';
 
-import { Crown, Mail, Phone, MapPin, Clock, Instagram, Facebook, Twitter, Heart, Gift,Sparkles } from 'lucide-react';
+import { Crown, Mail, Phone, MapPin, Clock, Instagram, Facebook, Twitter, Heart, Gift, Sparkles } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,6 +11,7 @@ export default function Footer() {
     { name: 'Winners Gallery', href: '/winners' },
     { name: 'Our Products', href: '/products' },
     { name: 'About Us', href: '/about' },
+    { name: 'Shop', href: '/shop' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -21,10 +22,10 @@ export default function Footer() {
   ];
 
   const storeInfo = [
-    { icon: Clock, text: '10:00 AM - 9:00 PM', subtext: 'Monday to Sunday' },
-    { icon: MapPin, text: 'Main Market, City Center', subtext: 'Your City - 123456' },
+    { icon: Clock, text: '09:00 AM - 9:00 PM', subtext: 'Monday to Sunday' },
+    { icon: MapPin, text: 'Panwari Road Near Canal, Gauhaniya ', subtext: 'Prayagraj - 212107' },
     { icon: Phone, text: '+91 99367 62093', subtext: 'Call for inquiry' },
-    { icon: Mail, text: 'asthacollection@gmail.com', subtext: 'Email us anytime' },
+    { icon: Mail, text: 'asthacollection07@gmail.com', subtext: 'Email us anytime' },
   ];
 
   return (
@@ -41,7 +42,7 @@ export default function Footer() {
         <div className="absolute bottom-40 left-32 animate-pulse animation-delay-2000">
           <Gift className="w-7 h-7 text-rose-300 opacity-20" />
         </div>
-        
+
         {/* Glowing Orbs */}
         <div className="absolute -top-32 -left-32 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
         <div className="absolute -bottom-32 -right-32 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
@@ -50,7 +51,7 @@ export default function Footer() {
       {/* Main Footer Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          
+
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
@@ -74,12 +75,12 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-            
+
             <p className="text-pink-100 mb-6 leading-relaxed">
-              Discover the latest fashion trends and exclusive collections at Astha Collection. 
+              Discover the latest fashion trends and exclusive collections at Astha Collection.
               Your one-stop destination for premium clothing and accessories since 2020.
             </p>
-            
+
             {/* Social Links */}
             <div className="flex items-center gap-4">
               {socialLinks.map((social) => {
@@ -150,7 +151,7 @@ export default function Footer() {
               <span>Lucky Draw</span>
               <Gift className="w-4 h-4 fill-yellow-300" />
             </h3>
-            
+
             <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-6 border-2 border-yellow-400/30 mb-4">
               <div className="text-center">
                 <div className="text-2xl mb-2">🎁</div>
@@ -178,7 +179,7 @@ export default function Footer() {
               <span className="hidden md:inline">•</span>
               <span>Crafted with <Heart className="w-4 h-4 fill-pink-400 inline" /> for our valued customers</span>
             </div>
-            
+
             <div className="flex items-center gap-6 text-xs text-pink-200">
               <a href="/privacy-policy" className="hover:text-yellow-300 transition-colors">Privacy Policy</a>
               <a href="/terms" className="hover:text-yellow-300 transition-colors">Terms of Service</a>

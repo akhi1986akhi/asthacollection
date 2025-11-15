@@ -96,10 +96,10 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
     alert('Thank you for your message! We will get back to you soon.');
     setFormData({ name: '', email: '', subject: '', message: '' });
     setIsSubmitting(false);
@@ -118,7 +118,7 @@ export default function ContactPage() {
         <div className="absolute bottom-40 left-32 animate-float animation-delay-2000">
           <Mail className="w-7 h-7 text-purple-400" />
         </div>
-        
+
         {/* Glowing Orbs */}
         <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
         <div className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
@@ -194,7 +194,7 @@ export default function ContactPage() {
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label className="block text-white/80 font-medium mb-2">Subject</label>
                 <input
@@ -207,7 +207,7 @@ export default function ContactPage() {
                   placeholder="What&apos;s this about?"
                 />
               </div>
-              
+
               <div>
                 <label className="block text-white/80 font-medium mb-2">Your Message</label>
                 <textarea
@@ -220,13 +220,12 @@ export default function ContactPage() {
                   placeholder="Tell us how we can help you..."
                 />
               </div>
-              
+
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-black text-lg py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl border-2 border-white/20 ${
-                  isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:shadow-yellow-500/30'
-                }`}
+                className={`w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-black text-lg py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl border-2 border-white/20 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:shadow-yellow-500/30'
+                  }`}
               >
                 {isSubmitting ? (
                   <div className="flex items-center justify-center gap-2">
@@ -296,7 +295,7 @@ export default function ContactPage() {
               <p className="text-white/70">Come see us in person</p>
             </div>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border-2 border-white/20">
               <h3 className="text-white font-bold text-xl mb-4">Astha Collection Store</h3>
@@ -314,19 +313,26 @@ export default function ContactPage() {
                   <span>Monday - Sunday: 09:00 AM - 09:00 PM</span>
                 </p>
               </div>
-              
+
               <div className="mt-6 p-4 bg-yellow-500/20 rounded-2xl border-2 border-yellow-400/30">
                 <p className="text-yellow-200 text-sm font-medium text-center">
                   🎉 Special Offer: Visit our store to get exclusive lucky draw entries!
                 </p>
               </div>
             </div>
-            
-            <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl p-4 border-2 border-white/20 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-6xl mb-4">🗺️</div>
-                <p className="text-white/80 font-medium">Interactive Map Coming Soon</p>
-                <p className="text-white/60 text-sm">We&apos;re working on adding an interactive map to help you find us easily!</p>
+
+            <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl p-0 border-0 border-white/20">
+              <div className="w-full h-full rounded-xl overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225.47772363845294!2d81.8020596901689!3d25.282572642197803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398537002a6a7b03%3A0x1d7f2b70380630ae!2sASTHA%20COLLECTION%20PREMIUM%20FASHION%20BOUTIQUE!5e0!3m2!1sen!2sin!4v1763139140014!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="min-h-[300px] rounded-xl"
+                />
               </div>
             </div>
           </div>
@@ -342,7 +348,7 @@ export default function ContactPage() {
             <p className="text-white/90 font-medium mb-6">
               Join thousands of happy customers and get a chance to win exciting prizes with every purchase
             </p>
-            <button 
+            <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="bg-white text-green-600 font-black text-lg py-4 px-8 rounded-2xl hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-xl"
             >
