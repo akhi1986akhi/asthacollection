@@ -63,14 +63,14 @@ export default function AgeGroupSection() {
             <span className="text-sm font-black tracking-wide">CURATED FOR YOU</span>
             <Heart className="w-5 h-5" />
           </div>
-          
+
           <h2 className="text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight">
             Fashion That
             <span className="block bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mt-2">
               Grows With You
             </span>
           </h2>
-          
+
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             From your first statement piece to timeless classics — discover collections designed for every chapter of your style journey.
           </p>
@@ -87,11 +87,21 @@ export default function AgeGroupSection() {
               {/* Gradient Header with Icon */}
               <div className={`relative bg-gradient-to-br ${group.color} p-8 text-white overflow-hidden`}>
                 {/* Background Pattern */}
+                {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-10">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -translate-y-1/2 translate-x-1/2"></div>
-                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-white rounded-full translate-y-1/2 -translate-x-1/2"></div>
+                  {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19].map((i) => (
+                    <div
+                      key={i}
+                      className="absolute w-2 h-2 bg-white rounded-full animate-twinkle"
+                      style={{
+                        left: `${(i * 5 + 10) % 100}%`,
+                        top: `${(i * 7 + 15) % 100}%`,
+                        animationDelay: `${(i * 0.3) % 3}s`
+                      }}
+                    ></div>
+                  ))}
                 </div>
-                
+
                 {/* Content */}
                 <div className="relative z-10">
                   <div className="text-5xl mb-4 animate-bounce-slow">{group.icon}</div>
@@ -187,21 +197,21 @@ export default function AgeGroupSection() {
               <Sparkles className="w-4 h-4 text-white" />
               <span className="text-white text-sm font-bold">PERSONALIZED JUST FOR YOU</span>
             </div>
-            
+
             <h3 className="text-4xl font-black text-white mb-4">
               Find Your Perfect Style Match
             </h3>
             <p className="text-white/95 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
               Answer a few quick questions and let us curate a personalized collection that celebrates your unique style and preferences.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button className="group bg-white text-purple-600 px-8 py-5 rounded-2xl font-black text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3">
                 <Sparkles className="w-5 h-5 group-hover:rotate-180 transition-transform duration-500" />
                 Take Style Quiz
                 <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
               </button>
-              
+
               <button className="bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 py-5 rounded-2xl font-black text-lg hover:bg-white/30 transition-all duration-300">
                 Browse All Collections
               </button>
