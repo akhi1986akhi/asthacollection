@@ -7,7 +7,7 @@ const categories = [
     id: 1,
     name: 'Wedding Collection',
     description: 'Exquisite outfits for your special day',
-    image: '/api/placeholder/300/300',
+    image: '/image/collection/wedding-1.webp',
     count: '150+ Items',
     gradient: 'from-purple-500 to-pink-500'
   },
@@ -15,7 +15,7 @@ const categories = [
     id: 2,
     name: 'Designer Sarees',
     description: 'Traditional elegance with modern touch',
-    image: '/api/placeholder/300/300',
+    image: '/image/collection/sarees-1.webp',
     count: '200+ Items',
     gradient: 'from-rose-500 to-red-500'
   },
@@ -23,7 +23,7 @@ const categories = [
     id: 3,
     name: 'Casual Wear',
     description: 'Comfort meets style everyday',
-    image: '/api/placeholder/300/300',
+    image: '/image/collection/casual-1.webp',
     count: '180+ Items',
     gradient: 'from-blue-500 to-cyan-500'
   },
@@ -31,7 +31,7 @@ const categories = [
     id: 4,
     name: 'Party Wear',
     description: 'Stand out in every gathering',
-    image: '/api/placeholder/300/300',
+    image: '/image/collection/party-1.webp',
     count: '120+ Items',
     gradient: 'from-orange-500 to-yellow-500'
   },
@@ -39,7 +39,7 @@ const categories = [
     id: 5,
     name: 'Traditional Kurtas',
     description: 'Ethnic charm for modern women',
-    image: '/api/placeholder/300/300',
+    image: '/image/collection/kurta-1.webp',
     count: '160+ Items',
     gradient: 'from-green-500 to-emerald-500'
   },
@@ -47,7 +47,7 @@ const categories = [
     id: 6,
     name: 'Accessories',
     description: 'Complete your look perfectly',
-    image: '/api/placeholder/300/300',
+    image: '/image/collection/accessries-1.webp',
     count: '90+ Items',
     gradient: 'from-indigo-500 to-purple-500'
   }
@@ -82,7 +82,18 @@ export default function CategorySection() {
               className="group relative bg-white rounded-3xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 cursor-pointer"
             >
               {/* Category Image */}
-              <div className={`relative h-48 bg-gradient-to-br ${category.gradient} overflow-hidden`}>
+
+              {category.image?
+              
+              
+              <img
+                src={category.image}
+                alt={category.name}
+                className="w-full h-48 object-cover group-hover:scale-110 transition-all duration-300"
+              />
+              :
+              
+               <div className={`relative h-48 bg-gradient-to-br ${category.gradient} overflow-hidden`}>
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>
                 <div className="absolute top-4 right-4">
                   <button className="bg-white/20 backdrop-blur-sm rounded-full p-2 hover:bg-white/30 transition-all duration-200">
@@ -90,6 +101,9 @@ export default function CategorySection() {
                   </button>
                 </div>
               </div>
+              
+              }
+             
 
               {/* Category Content */}
               <div className="p-6">

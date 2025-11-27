@@ -1,7 +1,7 @@
 'use client';
 
 import { Star, MapPin, Calendar, ExternalLink } from 'lucide-react';
-
+import Link from 'next/link';
 const googleReviews = [
   {
     id: 1,
@@ -89,17 +89,16 @@ export default function GoogleReviewsSection() {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Google Stars */}
                 <div className="flex items-center gap-1 bg-green-50 px-3 py-1 rounded-full">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className={`w-4 h-4 ${
-                        i < review.rating
+                      className={`w-4 h-4 ${i < review.rating
                           ? 'text-green-500 fill-green-500'
                           : 'text-gray-300'
-                      }`}
+                        }`}
                     />
                   ))}
                 </div>
@@ -117,7 +116,7 @@ export default function GoogleReviewsSection() {
                     <Calendar className="w-4 h-4" />
                     <span>{review.date}</span>
                   </div>
-                  
+
                   {review.photos > 0 && (
                     <div className="flex items-center gap-1">
                       <span>📷</span>
@@ -125,7 +124,7 @@ export default function GoogleReviewsSection() {
                     </div>
                   )}
                 </div>
-                
+
                 <div className="flex items-center gap-1">
                   <span>👍</span>
                   <span>{review.helpful} helpful</span>
@@ -152,10 +151,17 @@ export default function GoogleReviewsSection() {
             Share your experience with others and help them discover the best in fashion.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2">
-              <span>Write a Google Review</span>
-              <ExternalLink className="w-5 h-5" />
-            </button>
+            <Link
+              href="https://g.page/r/Ca4wBjhwK38dEAI/review"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <button className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2 group">
+                <span>Write a Google Review</span>
+                <ExternalLink className="w-5 h-5 transition-transform group-hover:scale-110" />
+              </button>
+            </Link>
             <button className="border-2 border-green-500 text-green-600 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-green-500 hover:text-white transition-all duration-300">
               Visit Our Store
             </button>
@@ -176,12 +182,12 @@ export default function GoogleReviewsSection() {
             </div>
             <div className="text-gray-600 font-semibold">Google Rating</div>
           </div>
-          
+
           <div className="text-center">
             <div className="text-5xl font-black text-blue-600 mb-2">500+</div>
             <div className="text-gray-600 font-semibold">Reviews</div>
           </div>
-          
+
           <div className="text-center">
             <div className="text-5xl font-black text-purple-600 mb-2">95%</div>
             <div className="text-gray-600 font-semibold">Positive Feedback</div>
