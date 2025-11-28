@@ -8,7 +8,7 @@ const ageGroups = [
     name: 'Gen Z Vibes',
     age: '13-19',
     description: 'Bold, expressive & unapologetically you',
-    image: '/api/placeholder/300/300',
+    image: '/image/collection/1.avif',
     styles: ['Streetwear', 'Party Ready', 'Campus Cool'],
     color: 'from-fuchsia-500 via-pink-500 to-rose-500',
     icon: '🌟'

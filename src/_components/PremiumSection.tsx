@@ -9,7 +9,7 @@ const premiumItems = [
     price: '₹12,999',
     originalPrice: '₹18,999',
     discount: '32% OFF',
-    image: '/api/placeholder/300/400',
+    image: '/image/premium/banarsi-sarees.jpg',
     rating: 4.9,
     reviews: 127,
     badge: 'Exclusive',
@@ -21,7 +21,7 @@ const premiumItems = [
     price: '₹25,999',
     originalPrice: '₹35,999',
     discount: '28% OFF',
-    image: '/api/placeholder/300/400',
+    image: '/image/premium/bridal-lehnga.avif',
     rating: 4.8,
     reviews: 89,
     badge: 'Luxury',
@@ -33,7 +33,7 @@ const premiumItems = [
     price: '₹8,999',
     originalPrice: '₹12,999',
     discount: '31% OFF',
-    image: '/api/placeholder/300/400',
+    image: '/image/premium/anarkali.webp',
     rating: 4.7,
     reviews: 156,
     badge: 'Premium',
@@ -45,7 +45,7 @@ const premiumItems = [
     price: '₹5,999',
     originalPrice: '₹8,499',
     discount: '29% OFF',
-    image: '/api/placeholder/300/400',
+    image: '/image/premium/hand-crafted.jpg',
     rating: 4.6,
     reviews: 203,
     badge: 'Artisanal',
@@ -87,14 +87,14 @@ export default function PremiumSection() {
             <span className="text-sm font-black tracking-wider">EXCLUSIVE LUXURY</span>
             <Sparkles className="w-5 h-5" />
           </div>
-          
+
           <h2 className="text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-100 to-amber-200 mb-6 tracking-tight drop-shadow-2xl">
             Premium
             <span className="block mt-2 bg-gradient-to-r from-purple-300 via-pink-200 to-purple-300 bg-clip-text">
               Collection
             </span>
           </h2>
-          
+
           <p className="text-xl text-purple-200 max-w-2xl mx-auto leading-relaxed">
             Discover our most exquisite pieces crafted with premium materials and exceptional attention to detail.
           </p>
@@ -112,7 +112,7 @@ export default function PremiumSection() {
               <p className="text-sm text-purple-200">Luxury Materials</p>
             </div>
           </div>
-          
+
           <div className="group relative bg-gradient-to-br from-pink-500/10 to-rose-500/10 backdrop-blur-xl rounded-3xl p-6 text-center border border-pink-400/30 hover:border-pink-400/60 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/50">
             <div className="absolute inset-0 bg-gradient-to-br from-pink-500/0 to-rose-500/0 group-hover:from-pink-500/20 group-hover:to-rose-500/20 rounded-3xl transition-all duration-500"></div>
             <div className="relative">
@@ -123,7 +123,7 @@ export default function PremiumSection() {
               <p className="text-sm text-pink-200">Limited Edition</p>
             </div>
           </div>
-          
+
           <div className="group relative bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-xl rounded-3xl p-6 text-center border border-emerald-400/30 hover:border-emerald-400/60 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/50">
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/0 to-teal-500/0 group-hover:from-emerald-500/20 group-hover:to-teal-500/20 rounded-3xl transition-all duration-500"></div>
             <div className="relative">
@@ -134,7 +134,7 @@ export default function PremiumSection() {
               <p className="text-sm text-emerald-200">1 Year Warranty</p>
             </div>
           </div>
-          
+
           <div className="group relative bg-gradient-to-br from-blue-500/10 to-indigo-500/10 backdrop-blur-xl rounded-3xl p-6 text-center border border-blue-400/30 hover:border-blue-400/60 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-indigo-500/0 group-hover:from-blue-500/20 group-hover:to-indigo-500/20 rounded-3xl transition-all duration-500"></div>
             <div className="relative">
@@ -157,24 +157,39 @@ export default function PremiumSection() {
             >
               {/* Gradient Overlay on Hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-pink-500/0 to-purple-500/0 group-hover:from-purple-500/20 group-hover:via-pink-500/10 group-hover:to-purple-500/20 transition-all duration-500 z-0"></div>
-              
+
+              {/* Product Image */}
               {/* Product Image */}
               <div className="relative h-72 bg-gradient-to-br from-purple-400/20 via-pink-400/20 to-amber-400/20 overflow-hidden">
+                {/* Thumbnail Image */}
+                {item.image ? (
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                ) : (
+                  /* Fallback gradient background when no image */
+                  <div className="w-full h-full bg-gradient-to-br from-purple-500/30 via-pink-500/30 to-amber-500/30 flex items-center justify-center">
+                    <span className="text-white/60 text-sm font-medium">Premium Item</span>
+                  </div>
+                )}
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                
+
                 <div className="absolute top-4 left-4 z-10">
                   <span className="bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 text-black px-4 py-2 rounded-full text-xs font-black shadow-lg backdrop-blur-sm flex items-center gap-1">
                     <Award className="w-3 h-3" />
                     {item.badge}
                   </span>
                 </div>
-                
+
                 <div className="absolute top-4 right-4 z-10">
                   <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-2 rounded-xl text-xs font-black shadow-lg backdrop-blur-sm">
                     {item.discount}
                   </span>
                 </div>
-                
+
                 {/* Rating Badge */}
                 <div className="absolute bottom-4 left-4 z-10 bg-black/80 backdrop-blur-md rounded-2xl px-4 py-2 flex items-center gap-2 border border-amber-400/30">
                   <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
@@ -193,7 +208,7 @@ export default function PremiumSection() {
                 <h3 className="font-black text-white text-xl mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-amber-300 group-hover:via-purple-300 group-hover:to-pink-300 group-hover:bg-clip-text transition-all duration-300">
                   {item.name}
                 </h3>
-                
+
                 {/* Features */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.features.map((feature, idx) => (
