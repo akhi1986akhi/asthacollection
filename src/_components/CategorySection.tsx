@@ -7,7 +7,7 @@ const categories = [
     id: 1,
     name: 'Wedding Collection',
     description: 'Exquisite outfits for your special day',
-    image: '/image/collection/wedding-1.webp',
+    image: '/image/thumbnail/collection/wedding-1.webp',
     count: '150+ Items',
     gradient: 'from-purple-500 to-pink-500'
   },
@@ -15,7 +15,7 @@ const categories = [
     id: 2,
     name: 'Designer Sarees',
     description: 'Traditional elegance with modern touch',
-    image: '/image/collection/sarees-1.webp',
+    image: '/image/thumbnail/collection/sarees-1.webp',
     count: '200+ Items',
     gradient: 'from-rose-500 to-red-500'
   },
@@ -23,7 +23,7 @@ const categories = [
     id: 3,
     name: 'Casual Wear',
     description: 'Comfort meets style everyday',
-    image: '/image/collection/casual-1.webp',
+    image: '/image/thumbnail/collection/casual-1.webp',
     count: '180+ Items',
     gradient: 'from-blue-500 to-cyan-500'
   },
@@ -31,7 +31,7 @@ const categories = [
     id: 4,
     name: 'Party Wear',
     description: 'Stand out in every gathering',
-    image: '/image/collection/party-1.webp',
+    image: '/image/thumbnail/collection/party-1.webp',
     count: '120+ Items',
     gradient: 'from-orange-500 to-yellow-500'
   },
@@ -39,7 +39,7 @@ const categories = [
     id: 5,
     name: 'Traditional Kurtas',
     description: 'Ethnic charm for modern women',
-    image: '/image/collection/kurta-1.webp',
+    image: '/image/thumbnail/collection/kurta-1.webp',
     count: '160+ Items',
     gradient: 'from-green-500 to-emerald-500'
   },
@@ -47,7 +47,7 @@ const categories = [
     id: 6,
     name: 'Accessories',
     description: 'Complete your look perfectly',
-    image: '/image/collection/accessries-1.webp',
+    image: '/image/thumbnail/collection/accessries-1.webp',
     count: '90+ Items',
     gradient: 'from-indigo-500 to-purple-500'
   }
