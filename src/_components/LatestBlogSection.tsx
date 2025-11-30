@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar, ArrowRight, Clock, Heart, Sparkles } from 'lucide-react';
+import Link from 'next/link';
 
 const LatestBlogSection = () => {
   const blogPosts = [
@@ -168,10 +169,13 @@ const LatestBlogSection = () => {
             </div>
           </div>
           
+          <Link href="/article">
+          
           <button className="relative bg-gradient-to-r from-rose-600 via-pink-500 to-amber-500 text-white font-serif font-bold px-12 py-4 rounded-full shadow-2xl hover:shadow-rose-300/50 transform hover:scale-105 transition-all duration-300 border-4 border-white/50 group overflow-hidden">
             <span className="relative z-10 tracking-wider">EXPLORE ALL STORIES</span>
             <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
           </button>
+          </Link>
         </div>
       </div>
     </section>
