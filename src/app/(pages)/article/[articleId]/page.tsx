@@ -79,10 +79,10 @@ const BlogDetailPage = async ({ params }: any) => {
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Back Button */}
         <div className="mb-8">
-          <button className="flex items-center gap-2 text-rose-600 font-serif font-semibold hover:text-rose-700 transition-colors duration-300 group">
+          <a href="/article" className="flex items-center gap-2 text-rose-600 font-serif font-semibold hover:text-rose-700 transition-colors duration-300 group">
             <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
             Back to Stories
-          </button>
+          </a>
         </div>
 
         {/* Article Header */}
